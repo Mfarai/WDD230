@@ -30,15 +30,17 @@ main {
     grid-gap: 5rem;
     justify-content: space-evenly;
     justify-items: stretch;
+    padding: top 1px;
     
 }
 main section{
     display: block;
     border: 1px solid rgb(133, 30, 50);
-    padding: 0 1rem;
+    padding: 1px;
     border-radius: 10px 10px 10px 10px;
     margin-top: 4rem;
     text-align: center;
+
 }
 section{
     display: block;
@@ -59,12 +61,12 @@ h3{
 .xantie{
     display: block;
     margin: 2rem auto;
-    width: 30%;
+    width: 15%;
 }
 main p{
     margin-top: auto;
     line-height: 2rem;
 }
 #xa-p {
-    grid-column: 3/4;
+    text-align: center;
 }

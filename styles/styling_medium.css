@@ -1,3 +1,18 @@
-@media only screen and (min-width: 32.5m){
-    
+@media only screen and (min-width: 40m){
+    h3 {
+        display: block;
+        font-size: 1em;
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        background-color: rgb(133, 30, 50);
+    }
+    h3{
+        padding: 0.5rem;
+    }
+    li{
+        display: flex;
+    }
 }
