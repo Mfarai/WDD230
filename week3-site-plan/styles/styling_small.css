@@ -6,7 +6,7 @@ header, footer{
     text-align: center;
     align-items: center;
     padding: 2rem;
-    background-color:rgb(133, 30, 50);
+    background-color:#92DCE5;
     border-radius: 5px;
 }
 header{
@@ -17,6 +17,7 @@ header, footer{
     max-width:  70rem;;
     margin: 0 auto;
     padding: 0.75rem;
+    box-shadow: 0 0 30px black;
 }
 hr{
     max-width: 45rem;
@@ -25,34 +26,48 @@ hr{
 main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 4rem;
+    grid-gap: 3rem;
     text-align: center;
     padding-left: 3rem;
     padding-right: 3rem;
-    max-width: 65rem;
+    box-shadow: 0 0 30px black;
+    max-width: 55rem;
     margin: 0 auto;
 }
 main section{
     margin-top: 4rem;
-    max-width:50rem;
+}
+section{
+    display: block;
+}
+h1{
     margin: 0 auto;
-    display: grid;
 }
 h3 {
     margin-top: 0;
-    background-color: rgb(133, 30, 50);
+    background-color:transparent;
+    box-shadow: 0 0 30px black;
+    text-decoration:underline 3px;
+    max-width:none;
+    padding: 0.5rem;
 }
-h3{
-    padding: 1rem;
+h4{
+    text-decoration: underline;
 }
-main p{
+p{
+    text-align: center;
     margin-top: 1rem;
     line-height: 1.5rem;
 }
+.paragraph{
+    text-align: left;
+}
 .navlist{
     display: grid;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    padding: 0.5rem;
 }
 .navlist :hover{
-    background: rgb(133, 30, 50);
+    background-color:#7C7C7C;
 }
-
