@@ -66,8 +66,8 @@ p{
     display: grid;
     align-items: center;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
-    padding: 0.5rem;
+    padding: .1rem;
 }
 .navlist :hover{
-    background-color:#7C7C7C;
+    background-color:#92DCE5;
 }
