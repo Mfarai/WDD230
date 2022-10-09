@@ -4,20 +4,22 @@ body{
 }
 header, footer{
     text-align: center;
-    align-items: center;
     padding: 2rem;
     background-color:#92DCE5;
     border-radius: 5px;
 }
 header{
     margin-top: 5px;
-    display: flex;
+}
+.date,
+aside {
+	margin: 0.8rem;
 }
 header, footer{
-    max-width:  70rem;;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 0.75rem;
-    box-shadow: 0 0 30px black;
+    box-shadow: 0 0 5px black;
 }
 hr{
     max-width: 45rem;
@@ -31,7 +33,7 @@ main {
     padding-left: 3rem;
     padding-right: 3rem;
     box-shadow: 0 0 30px black;
-    max-width: 55rem;
+    max-width: 75rem;
     margin: 0 auto;
 }
 main section{
@@ -39,9 +41,6 @@ main section{
 }
 section{
     display: block;
-}
-h1{
-    margin: 0 auto;
 }
 h3 {
     margin-top: 0;
@@ -62,12 +61,14 @@ p{
 .paragraph{
     text-align: left;
 }
-.navlist{
+.navlist a{
     display: grid;
-    align-items: center;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
-    padding: .1rem;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    padding: .5rem 0;
+    color: black;
 }
 .navlist :hover{
-    background-color:#92DCE5;
+    background-color:whitesmoke;
+    padding: auto;
 }
