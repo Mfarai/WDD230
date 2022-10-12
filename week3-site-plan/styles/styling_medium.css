@@ -23,6 +23,7 @@
         box-shadow: none;
     }
     h1{
+        margin: 0 auto;
         text-align:left;
         font-size: 2em;
     }
