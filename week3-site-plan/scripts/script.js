@@ -6,26 +6,34 @@ function toggleMenu() {
 
 document.querySelector("#hamburgerMenu").addEventListener("click", toggleMenu)
 
+function getDayName(weekDayNumber) {
+    const dayNames = {0: "Sunday", 1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday"}
+
+    const dayName = dayNames[weekDayNumber]
+    return dayName
+}
+
+function getMonthName(monthNumber) {
+    const months = {0: "January", 1: "February", 2: "March", 3: "April", 4: "May", 5: "June",
+    6: "July", 7: "August", 8: "September", 9: "October", 10: "November", 11: "December"}
+
+    const monthName = months[monthNumber]
+    return monthName
+}
+
+//Define date variables
 const date = new Date()
+const dayNumber = date.getDate()
+const dayName = getDayName(date.getDay())
+const month = getMonthName(date.getMonth())
 const year = date.getFullYear()
-const lastUpdated = document.lastModified
 
+//Add current date to header
+document.querySelector("#currentDate").textContent = `${dayName}, ${dayNumber} ${month} ${year}`
+
+//Add year to footer
 document.querySelector("#year").textContent = year
-document.querySelector("#lastUpdated").textContent = lastUpdated
 
-// select the elements to manipulate (output to)
-const datefield = document.querySelector(".date");
-const datefieldUK = document.querySelector("aside"); // for european/family history format with day first.
-
-// derive the current date using a date object
-const now = new Date();
-const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
-	now
-);
-const fulldateUK = new Intl.DateTimeFormat("en-UK", {
-	dateStyle: "full"
-}).format(now);
-// long, medium, short options ... try them
-
-datefield.innerHTML = `<em>${fulldate}</em>`;
-datefieldUK.innerHTML = `<em>${fulldateUK}</em>`;
+//Add last modified to footer
+const lastModified = document.lastModified
+document.querySelector("#lastModified").textContent = lastModified
