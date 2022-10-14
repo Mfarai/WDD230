@@ -1,35 +1,44 @@
-@media only screen and (min-width: 768px) {
-    
-    header h1 {
-        font-size: 3rem;
-    }
-    
-    main {
-        grid-template-columns: repeat(2, 1fr);
+@media only screen and (min-width: 800px) {
+    header #pageNavigation {display: flex;}
+    header #hamburgerMenu {display: none;}
+    header #navigation.open {flex-direction: row; align-items: center;}
+}
+
+@media only screen and (min-width: 600px) {
+
+    #mainSections {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 300px);
     }
 
-    section:nth-child(3) {
-        grid-column: span 2;
+    #mainSections #heroSection {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
     }
-    header{
-        text-align: left;
-        display: flex;
-        padding: 5px 0;
-        align-content: center;
+    
+    #mainSections #eventSection {
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
     }
-    section .navlist a{
-        display: grid;
-        grid-template-columns: repeat(4,.5fr);
-        box-shadow: none;
+    
+    #mainSections #weatherSection {
+        grid-column: 3 / 4;
+        grid-row: 5 / 6;
     }
-    h1{
-        margin: 0 auto;
-        text-align:left;
-        font-size: 2em;
+    
+    #mainSections #newsSection {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
     }
-    .date,
-    aside {
-	text-align: start;
-    margin:none;
+    
+    #mainSections #spotlightsSection {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+    
+    #mainSections #joinSection {
+        display: block;
+        grid-column: 1 / 4;
+        grid-row: 4 / 5;
     }
 }
