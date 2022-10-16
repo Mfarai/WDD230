@@ -34,6 +34,28 @@ document.querySelector("#currentDate").textContent = `${dayName}, ${dayNumber} $
 //Add year to footer
 document.querySelector("#year").textContent = year
 
+//Add banner to header
+function displayBanner(dayName) {
+
+    //Use this line to test the function: || dayName === "Current day name to test"
+    if (dayName === "Monday" || dayName === "Tuesday") {
+        const banner = document.querySelector("#banner")
+        banner.className = "display"
+        banner.innerHTML = "<p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>"
+    } else {
+        const banner = document.querySelector("#banner")
+        banner.classList.toggle("display")
+    }
+}
+
+displayBanner(dayName)
+
+//Add current date to header
+document.querySelector("#currentDate").textContent = `${dayName}, ${dayNumber} ${month} ${year}`
+
+//Add year to footer
+document.querySelector("#year").textContent = year
+
 //Add last modified to footer
 const lastModified = document.lastModified
 document.querySelector("#lastModified").textContent = lastModified
