@@ -13,11 +13,23 @@ header {
     padding: 1rem;
 }
 
+header #banner {
+    display: none;
+}
+
+header #banner.display {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-family: var(--hammersmith-one-font);
+    text-align: center;
+}
+
 header #logo {
     width: 100px;
     position: absolute;
-    top: 1rem;
-    left: 5rem;
+    top: 5rem;
+    left: 2rem;
 }
 
 header #navigation {
@@ -46,6 +58,7 @@ header #pageNavigation li a {
 header #pageNavigation li a:hover {
     color: var(--action-color);
     transition: .2s ease-out;
+    
 }
 
 header #pageNavigation li a:active{
@@ -73,8 +86,8 @@ header #hamburgerMenu {
 }
 
 header #navigation.open {
-    flex-direction: column-reverse;
-    align-items: flex-end;
+    flex-direction:column-reverse;
+    align-items:stretch;
 }
 
 header #pageNavigation.open {
@@ -195,7 +208,7 @@ footer #baseFooter {
     color:black;
     font-size: 1rem;
     font-family: var(--inter-font);
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
 }
 
 footer #mainFooter #contactInformation {

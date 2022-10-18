@@ -6,6 +6,10 @@
 
 @media only screen and (min-width: 600px) {
 
+    header #pageNavigation {
+        margin-left: 5rem;
+    }
+
     #mainSections {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 300px);
