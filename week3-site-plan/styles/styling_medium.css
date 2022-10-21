@@ -12,7 +12,7 @@
 
     #mainSections {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, 300px);
+        grid-template-rows: repeat(5, auto);
     }
 
     #mainSections #heroSection {
