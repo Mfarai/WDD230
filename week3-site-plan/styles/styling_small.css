@@ -28,9 +28,10 @@ header #banner.display {
 header #navigation #logo {
     width: 100px;
     position: absolute;
-    top: 1.5rem;
+    top: 1rem;
     left: 2rem;
     float: left;
+    border-radius: 15px 15px 15px 15px;
 }
 
 header #navigation {
@@ -51,14 +52,15 @@ header #pageNavigation {
 }
 
 header #pageNavigation li a {
-    color: white;
+    color: black;
     text-decoration: none;
     padding: .5rem;
 }
 
 header #pageNavigation li a:hover {
-    color: var(--action-color);
+    color:whitesmoke;
     transition: .2s ease-out;
+    border-radius: 15px 5px 15px 5px;
     
 }
 
@@ -112,6 +114,7 @@ header #currentDate {
 /* MAIN */
 
 .joinUsButton {
+    background-color: #92dce5;
     border: none;
     border-radius: 4px;
     padding: .5rem 1em;
@@ -119,7 +122,7 @@ header #currentDate {
 }
 
 .joinUsButton:hover {
-    background-color: #92dce5;
+    background-color:mediumturquoise;
 }
 
 #mainSections {
@@ -142,18 +145,22 @@ header #currentDate {
     grid-row: 1 / 2;
     text-align: center;
     position: relative;
+    border-radius: 15px 5px 15px 5px;
 }
 
 #mainSections #heroSection picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 15px 5px 15px 5px;
 }
 
 #mainSections #heroSection h3 {
     position: absolute;
     left: 1em;
-    color:white;
+    color:black;
+    font-size: 1.5rem;
+    font-weight:800;
 }
 
 #mainSections #heroSection .joinUsButton {
@@ -167,6 +174,7 @@ header #currentDate {
     grid-row: 2 / 3;
     text-align:center;
     background-color: #7c7c7c;
+    border-radius: 15px 5px 15px 5px;
 }
 
 #mainSections #weatherSection {
@@ -174,6 +182,7 @@ header #currentDate {
     grid-row: 3 / 4;
     text-align: center;
     background-color: #7c7c7c;
+    border-radius: 15px 5px 15px 5px;
 }
 
 #mainSections #newsSection {
@@ -181,6 +190,7 @@ header #currentDate {
     grid-row: 4 / 5;
     text-align: center;
     background-color: #7c7c7c;
+    border-radius: 15px 5px 15px 5px;
 }
 
 #mainSections #spotlightsSection {
@@ -188,12 +198,14 @@ header #currentDate {
     grid-row: 5 / 7;
     text-align: center;
     background-color: #7c7c7c;
+    border-radius: 15px 5px 15px 5px;
 }
 
 #mainSections #joinSection {
     display: none;
     text-align: center;
     background-color: #7c7c7c;
+    border-radius: 15px 5px 15px 5px;
 }
 /* MAIN END */
 
@@ -213,7 +225,7 @@ footer #mainFooter {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem;
+    padding: 0rem;
     font-family: var(--inter-font);
     color: black;
     gap: 2rem;
@@ -222,18 +234,20 @@ footer #mainFooter {
 footer #mainFooter #logo {
     width: 100px;
     float: left;
+    border-radius: 15px 15px 15px 15px;
 }
 
 footer #baseFooter {
     text-align: center;
     color:black;
-    font-size: 1rem;
+    font-size: 1.01rem;
     font-family: var(--inter-font);
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 footer #mainFooter #contactInformation {
     text-align: center;
+    font-size: 1.01rem;
 }
 
 footer #mainFooter #contactInformation :nth-child(2) {
