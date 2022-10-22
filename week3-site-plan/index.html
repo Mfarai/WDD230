@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--mata tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Website Project, WDD230 Class at BYU-Idaho, Samad Damas.">
+    <meta name="description" content="Chamber of Commerce Website Project, WDD230 Class at BYU-Idaho, Farai Mugijima.">
+    <!--faviicon,normalize css,local css-->
     <link rel="shortcut icon" href="shortcut icon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/styling_small.css">
     <link rel="stylesheet" href="styles/styling_medium.css">
     <link rel="stylesheet" href="styles/styling_large.css">
-    <script src="scripts/script.js" defer></script>
     <title>MUTARE CHAMBERS</title>
 </head>
 <body>
@@ -34,37 +35,59 @@
     </header>
     <!-- MAIN -->
     <main id="mainSections">
-       <section class="mainSection" id="heroSection"> <h3>Welcome to Mutare Chambers</h3>
-        <picture>
-            <img src="images/wdd230-org.jpg" alt="coluges sitting on table have a discusuion">
-        </picture>
-        <button class="joinUsButton">Join the Chamber</button>
+       <section class="mainSection" id="heroSection">
+            <h3>Welcome to Mutare Chambers</h3>
+            <picture>
+                <source srcset="images/hero_image_medium.jpg" media="(min-width: 600px) and (max-width: 63.9rem)">
+                <source srcset="images/hero_image_large.jpg" media="(min-width: 64rem)">
+
+                <img src="images/hero_image_small.jpg" alt="workers having a group discussion.">
+            </picture>
+            <button class="joinUsButton">Join the Chamber</button>
        </section>
-       <section class="mainSection" id="eventSection"> <h3>Event</h3>
-        <p>Learning opportunity for young enterprenuers, with mentorship from succesfull business owners as they share there ideas on how to manage and gro a business. <br>friday 12 p.m</p>
+       <section class="mainSection" id="eventSection">
+            <h3>Event</h3>
+            <p>Learning opportunity for young enterprenuers, with mentorship from succesfull business owners as they share there ideas on how to manage and gro a business. <br>friday`s 12 p.m</p>
        </section>
-       <section class="mainSection" id="weatherSection"><h3>Weather</h3>
-        <p>its hot today carry umbrella</p>
-        <hr>
+       <section class="mainSection" id="weatherSection">
+            <h3>Weather</h3>
+            <hr>
+            <div id="climate">
+                <img src="images/weather_sun_cloud.png" alt="image representating the current climate">
+                <p><span id="temperature">28</span>ºC</p>
+            </div>
+            </div id="climateInformation">
+            <hr>
+                <p>Wind Speed: <span id="wind_speed">5</span>mph</p>
+                <p>Wind Chill: <span id="wind_chill"></span>ºC</p>
+            </div>
        </section>
-       <section class="mainSection" id="joinSection"><h3>Join</h3>
-        <p>come join us and let us help one another reach our full potential, dont be left out</p>
-        <button class="joinUsButton">Join the Chamber</button>
+       <section class="mainSection" id="joinSection">
+            <h3>Join</h3>
+            <p>come join us and let us help one another reach our full potential, dont be left out</p>
+            <button class="joinUsButton">Join the Chamber</button>
        </section>
-       <section class="mainSection" id="newsSection"><h3>News</h3>
-        <p>we have a show casing event next weekend surtaday come explore new ideas and show case your business too.</p>
+       <section class="mainSection" id="newsSection">
+            <h3>News</h3>
+            <p>we have a show casing event next weekend surtaday come explore new ideas and show case your business too.</p>
        </section>
        <section class="mainSection" id="spotlightsSection">
-            <div id="spotlight1"><h3>Spotlight 1</h3>
-                <p>in spotlight1</p>
+            <div class="spotlight" id="spotlight1">
+                <h3>Spotlight 1</h3>
+                <img src="images/Farm-Shop-Front.jpg" alt="farm shop">
+                <p>farm shop get it all with us</p>
             </div>
             <hr>
-            <div id="spotlight2"><h3>Spotlight 2</h3>
-                <p>in spotlight2</p>
+            <div class="spotlight" id="spotlight2">
+                <h3>Spotlight 2</h3>
+                <img src="images/game.jpg" alt="gaming lounge">
+                <p>Gaming world for both the you and the old, lets have fun!!</p>
             </div>
             <hr>
-            <div id="spotlight3"><h3>Spotlight 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dignissimos voluptates aperiam ratione officiis labore tempore doloribus ab incidunt,</p>
+            <div class="spotlight" id="spotlight3">
+                <h3>Spotlight 3</h3>
+                <img src="images/clothes-2.jpg" alt="cloths shop">
+                <p>PROPA for all your proper clothing looks.</p>
             </div>
        </section> 
     </main>
@@ -81,5 +104,7 @@
             &copy;<span id="year"></span> MUTARE CHAMBERS | Farai Mugijima | WDD 230 Project | Last Modification: <span id="lastModified"></span>
         </section>
     </footer>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 </html>
