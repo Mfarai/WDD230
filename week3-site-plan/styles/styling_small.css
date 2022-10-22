@@ -133,6 +133,8 @@ header #currentDate {
     font-family: var(--hammersmith-one-font);
     color:whitesmoke;
     padding: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 #mainSections .mainSection {
