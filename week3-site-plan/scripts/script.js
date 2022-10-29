@@ -6,6 +6,40 @@ function toggleMenu() {
 
 document.querySelector("#hamburgerMenu").addEventListener("click", toggleMenu)
 
+//get all images
+const imagesToLoad = document.querySelectorAll("img[data-src]")
+
+//changes the path from data-src to src
+const loadImages = (image) => {
+    image.setAttribute("src", image.getAttribute("data-src"))
+    image.onload = () => {
+        image.removeAttribute("data-src")
+    };
+}
+
+//verify if intersection observer is supported
+if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((items, observer) => {
+        items.forEach((item) => {
+            if (item.isIntersecting) {
+                loadImages(item.target);
+                observer.unobserve(item.target);
+            };
+        });
+    });
+
+    //iterate to each imgs
+    imagesToLoad.forEach((img) => {
+        observer.observe(img)
+    });
+
+    //load all imgs
+} else {
+    imagesToLoad.forEach((img) => {
+        loadImages(img);
+    });
+}
+
 function getDayName(weekDayNumber) {
     const dayNames = {0: "Sunday", 1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday"}
 
@@ -59,3 +93,21 @@ document.querySelector("#year").textContent = year
 //Add last modified to footer
 const lastModified = document.lastModified
 document.querySelector("#lastModified").textContent = lastModified
+
+// Handle localStorages
+// Save Current Visit day
+localStorage.setItem("visitDay", today)
+// Calculate difference between last visit and today
+const daysSinceLastVisit =  localStorage.getItem("visitDay") - localStorage.getItem("lastVisit")
+// Get element to display the difference
+const lastVisitDisplay = document.querySelector("#current-visit")
+
+if (daysSinceLastVisit != 0) {
+    lastVisitDisplay.textContent = `Happy to see you, it had been long ${daysSinceLastVisit} days`
+} else {
+    lastVisitDisplay.textContent = `Seem to be your first time here, and we very much happy to be with you :)`
+}
+
+// Store today's date to be used as last visit for the next time website is open
+const lastDayVisited = date.getDate()
+localStorage.setItem("lastVisit", lastDayVisited)

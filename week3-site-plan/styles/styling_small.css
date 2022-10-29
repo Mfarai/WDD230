@@ -65,7 +65,7 @@ header #pageNavigation li a:hover {
 }
 
 header #pageNavigation li a:active{
-    background-color: #7c7c7c;
+    color: #7c7c7c;
 }
 
 header #socialNavigation{
@@ -91,6 +91,9 @@ header #hamburgerMenu {
 header #navigation.open {
     flex-direction:column-reverse;
     align-items:stretch;
+    margin:0 auto;
+    margin-top: 5px;
+
 }
 
 header #pageNavigation.open {
@@ -264,4 +267,76 @@ footer #mainFooter #contactInformation {
 
 footer #mainFooter #contactInformation :nth-child(2) {
     margin-top: 1.5rem;
+}
+
+/* Discover Page */
+#current-visit {
+    text-align: center;
+    font-family: var(--hammersmith-one-font);
+    color: black;
+}
+
+#discover-main {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 70%;
+    margin: 0 auto;
+    background-color:azure;
+}
+
+#discover-main h1, h3 {
+    font-family: var(--hammersmith-one-font);
+    color: #92dce5;
+    margin-top: 2rem;
+}
+
+#discover-main p {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.7rem;
+}
+
+#discover-main p, #discover-main span {
+    font-family: var(--inter-font);
+    display: block;
+}
+
+#discover-text p {
+    display: block;
+    margin-top: 1rem;
+}
+
+#scenary-places h3 {
+    margin-top: 4rem;
+}
+
+#scenary-places span {
+    margin: 0 1rem;
+}
+
+#scenary-places img[data-src] {
+    filter: blur(0em);
+}
+
+#scenary-places picture {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+#scenary-places img {
+    width: 65%;
+    height: auto;
+    margin: 2rem;
+    filter: blur(0em);
+    transition: filter 0.2s;
+    transition: scale .2s ease-in-out;
+    pointer-events: none;
+}
+
+#scenary-places img:hover {
+    scale: 1.1;
+    box-shadow: 0 0 15px #92dce5;
 }
