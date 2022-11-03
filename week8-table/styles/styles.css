@@ -5,10 +5,15 @@
 	--forelight: hsla(0,0%,100%,1);
 	--border: hsl(0,0%,20%);
 	--borderlight: hsl(0,0%,33%);
-	--shadow: rgb(158, 85, 85);
+	--shadow: rgb(19, 12, 12);
 	--zebra: hsl(0, 0%, 93%, 1);
 }
-
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #815b5b;
+}
 table {
 	margin: 20em auto;
 	border: thin solid var(--border);
