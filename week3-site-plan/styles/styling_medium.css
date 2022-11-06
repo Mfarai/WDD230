@@ -55,7 +55,7 @@
 
     .member-selection{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(400px, auto));
+        grid-template-columns: repeat(auto-fit,minmax(500px, auto));
     }
 
 }
