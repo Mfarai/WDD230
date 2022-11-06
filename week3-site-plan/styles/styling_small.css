@@ -340,3 +340,117 @@ footer #mainFooter #contactInformation :nth-child(2) {
     scale: 1.1;
     box-shadow: 0 0 15px #92dce5;
 }
+
+/*-------------Forms base ---------------*/
+main.forms {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 0 2%;
+    min-height: 20rem;
+    background-color:#7c7c7c;
+    display: grid;
+}
+.forms h1 {
+    margin:0 auto;
+    background-color:#92dce5;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+/*----------- FORM --------------*/
+
+form fieldset {
+    margin: 2rem 0;
+    border: 5px solid #92dce5;
+    border-radius: 20px;
+    padding: .5rem 2% ;
+}
+form legend {
+    margin: 0 1rem;
+    padding: 0;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: white;
+    font-size: .8rem;
+}
+
+form label.top input, form label.top select {
+    display: block;
+    font-size: 1rem;
+    border: solid 1px rgb(151, 151, 151);
+    border-radius: 4px;
+    padding: .75rem;
+    width: 100%;
+    max-width: 20rem;
+    background-color: rgb(255, 255, 255);
+}
+.member-selection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 5rem; 
+}
+.row{
+    background: #92dce5;
+    box-shadow: 18px 0px 87px 0px rgb(10, 15, 70 / 7%);
+    border-radius: 12px 0px 10px;
+    padding: 30px 30px 30px;
+    transition: ease .45s;
+    cursor: pointer;
+ }
+
+ .row h3{
+    color: #1e2122;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 2px;
+ }
+
+ .row h5{
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 19px;
+ }
+
+ .row p{
+    font-size: var(--p-font);
+    color: var(--text-color);
+    line-height: 28px;
+ }
+
+ .row:hover{
+    will-change: transform;
+    transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05,1.05,1.05);
+ }
+
+form input.submitBtn {
+    border: none;
+    background-color: #92dce5 ;
+    color:#7c7c7c;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 20rem;
+}
+form label.top input:required {
+    border-left: #e61c1c solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: rgb(59, 230, 59) solid 6px;
+}
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
