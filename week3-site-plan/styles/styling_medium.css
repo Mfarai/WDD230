@@ -50,4 +50,12 @@
     #scenary-places img {
         pointer-events: all;
     }
+
+    /*join*/
+
+    .member-selection{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(400px, auto));
+    }
+
 }

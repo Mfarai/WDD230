@@ -342,7 +342,7 @@ footer #mainFooter #contactInformation :nth-child(2) {
 }
 
 /*-------------Forms base ---------------*/
-main.forms {
+.forms {
     max-width: 70%;
     margin: 0 auto;
     margin-top: 35px;
@@ -358,6 +358,7 @@ main.forms {
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
+    width: auto;
 }
 /*----------- FORM --------------*/
 
@@ -365,7 +366,7 @@ form fieldset {
     margin: 2rem 0;
     border: 5px solid #92dce5;
     border-radius: 20px;
-    padding: .5rem 2% ;
+    padding: .5rem 2%;
 }
 form legend {
     margin: 0 1rem;
@@ -377,6 +378,7 @@ form label.top, form div {
     padding-top: 1rem;
     color: white;
     font-size: .8rem;
+    width: auto;
 }
 
 form label.top input, form label.top select {
@@ -388,13 +390,14 @@ form label.top input, form label.top select {
     width: 100%;
     max-width: 20rem;
     background-color: rgb(255, 255, 255);
+    width: auto;
 }
 .member-selection{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(500px, auto));
+    display: block;
     grid-gap: 2rem;
     align-items: center;
     margin-top: 5rem; 
+    width: auto;
 }
 .row{
     background: #92dce5;
@@ -403,6 +406,7 @@ form label.top input, form label.top select {
     padding: 30px 30px 30px;
     transition: ease .45s;
     cursor: pointer;
+    margin-bottom: 5px;
  }
 
  .row h3{
@@ -440,6 +444,11 @@ form input.submitBtn {
     margin: 0 0 2rem 2%;
     width: 96%;
     max-width: 20rem;
+}
+
+.forms fieldset label textarea{
+    display: block;
+    width: auto;
 }
 form label.top input:required {
     border-left: #e61c1c solid 6px;
