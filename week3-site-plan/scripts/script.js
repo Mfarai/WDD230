@@ -107,7 +107,3 @@ if (daysSinceLastVisit != 0) {
 } else {
     lastVisitDisplay.textContent = `Seem to be your first time here, and we very much happy to be with you :)`
 }
-
-// Store today's date to be used as last visit for the next time website is open
-const lastDayVisited = date.getDate()
-localStorage.setItem("lastVisit", lastDayVisited)

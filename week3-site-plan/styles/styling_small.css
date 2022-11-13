@@ -463,3 +463,42 @@ form label.top input:required:valid {
     display: table;
     clear: both;
   }
+
+/* directory */
+
+h2{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+/*Json file*/
+.cards {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 75%;
+}
+.cards section:hover{
+    scale: 1.02;
+}
+.cards section {
+    border: 2px solid #92dce5;
+    background-color:#7c7c7c;
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.cards img {
+    width: 40%;
+    box-shadow: 1px 1px 10px 1px rgba(255, 253, 253, 0.616);
+    border-radius: 5px;
+}
+.cards img:hover {
+    scale: 1.1;
+}
+.cards p {
+    font-weight: 300;
+}
+

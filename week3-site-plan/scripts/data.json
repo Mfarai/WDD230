@@ -1,0 +1,68 @@
+{
+  "cards": [
+    {
+      "name": "Halsteds",
+      "imageurl": "./images/json/halsteds-logo-new2.png",
+      "addresses": "33 second s, Mutare",
+      "phone": "020 2064772",
+      "URL": "www.halsteds.co.zw"
+    },
+    {
+      "name": "Bhola hardware",
+      "imageurl": "./images/json/blola.png",
+      "addresses": "4 E Ave Mutare",
+      "phone": "020 2067279",
+      "URL": "bholahardware.com"
+    },
+    {
+      "name": "Muatre Mart",
+      "imageurl": "./images/json/Mutare-Mart-Logo.jpeg",
+      "addresses": "42 second street, Mutare",
+      "phone": "020 61210",
+      "URL": "mutaremart.com"
+    },
+    {
+      "name": "Holiday Inn",
+      "imageurl": "./images/json/holiday.inn.png",
+      "addresses": "Aerodrom RD, Mutare",
+      "phone": "020 64431",
+      "URL": "www.holidayinn.com"
+    },
+    {
+      "name": "MFS Group",
+      "imageurl": "./images/json/mfs.group.png",
+      "addresses": "20 Glasglow RD, Mutare",
+      "phone": "020 2060728",
+      "URL": "mfsgroupzw.com"
+    },
+    {
+      "name": "Electro Sales Mutare",
+      "imageurl": "./images/json/electrosales.png",
+      "addresses": "458 Robert Mugabe, Second st Mutare",
+      "phone": "020 2168219",
+      "URL": "www.electrosales.co.zw"
+    },
+    {
+      "name": "Nandos",
+      "imageurl": "./images/json/nandos-logo.svg",
+      "addresses": "32 Second st Mutare",
+      "phone": "073 120 0948",
+      "URL": "www.nandoz.co.zw"
+    },
+    {
+      "name": "Edgars Store",
+      "imageurl": "./images/json/edgars.png",
+      "addresses": "Herbet Chitepo st, Main st Mutare",
+      "phone": "+263 206 3136",
+      "URL": "www.edgarsstores.co.zw"
+    },
+    {
+      "name": "The Farm Shop",
+      "imageurl": "./images/json/Farm-Shop-Front.jpg",
+      "addresses": "55 Main st, Mutare",
+      "phone": "020 2067574",
+      "URL": "www.farmshop.co.zw"
+    }
+    
+  ]
+}
