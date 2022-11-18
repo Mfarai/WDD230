@@ -502,3 +502,77 @@ h2{
     font-weight: 300;
 }
 
+/******* DIRECTORY PAGE ********/
+/*--- Buttons Styling ---*/
+.menu {
+	text-align: center;
+}
+.menu button {
+	padding: 1rem;
+	border: 2.5px solid rgb(41, 97, 194);
+}
+
+#grid img, #list img{
+	width: 20px;
+	height: 20px;
+    
+}
+
+/* buttons*/
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	align-items: center;
+	
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+
+}
+
+.list section {
+	display: flex;	
+	align-items: center;
+}
+
+.grid section {
+	flex-direction: column;
+	text-align: center;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.list section {
+	flex-direction: column;
+	justify-content: left;
+}
+
+.list section > * {
+	margin: 0 1rem;
+	/* text-align: left; */
+	flex-flow: row;
+}
+
+.list section img {
+	display: none; 
+}
+
+.grid section h3 {
+	display: none; 
+}
+
+.list section h3 {
+	font-size: .85rem;
+
+}
+.list section p {
+	font-size: .85rem;
+}
+.list section:nth-child(odd) {
+	background-color: #d9f6f4;
+}
