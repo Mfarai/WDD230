@@ -36,7 +36,7 @@ apiFetch();
     let wind = document.createElement('p')
  
     const tF = weatherData.main.temp.toFixed(0);
-    currentTemp.innerHTML = `The current temperature in Mutare, Zimbabwe is <strong>${tF}C</strong>`;
+    currentTemp.innerHTML = `The current temperature in Mutare, Zimbabwe is <strong>${tF}ºC</strong>`;
   
     const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
     const desc = weatherData.weather[0].description;
