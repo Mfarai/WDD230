@@ -62,4 +62,11 @@
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         grid-gap: 10px;
     }
+
+    /* contact */
+
+    .contact .action form input[type="email"]{
+        max-width: 100%;
+        width: 470px;
+    }
 }
