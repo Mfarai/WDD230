@@ -31,14 +31,14 @@
         <div id="currentDate">Tuesday, 04 October 2022</div>
     </header>
     <!-- MAIN -->
-    <main>
-        <div class="directory_menu">
-            <input type="image" id="large_btn" alt="Large View" src="images/discovery/cards_icon.png" onclick="view('large')">
-            <input type="image" id="small_btn" alt="Small View" src="images/discovery/list_icon.png" onclick="view('small')">
-        </div>  
+    <main id="directory-main">
         <h2>My Directory</h2>
-
-        <div class="cards"></div>
+        <div id="displays"><picture id="grid"><img class="display-type" src="images/grid.png" alt="Grid display image"></picture><picture id="list"><img class="display-type" src="images/list.png" alt="List display image"></picture></div>
+        <div class="display grid"></div>
+        <div id="attribution">
+            <a href="https://www.flaticon.com/free-icons/list" title="list icons">List icons </a>
+            <a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons </a>
+        </div>
         
     </main>
     <!-- FOOTER -->

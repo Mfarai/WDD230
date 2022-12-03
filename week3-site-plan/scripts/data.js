@@ -44,21 +44,28 @@ fetch(requestFile)
     cards.appendChild(url);
     
     // Append the cards
-    document.querySelector('div.cards').appendChild(cards);
+    document.querySelector('div.display').appendChild(cards);
 }
   
 /*------------Button Listeners ----------------*/
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const display = document.querySelector("article");
+const display = document.querySelector(".display");
 
-gridbutton.addEventListener("click", () => {
-	// example using arrow function
-	display.classList.add("grid");
-	display.classList.remove("list");
-});
+gridbutton.addEventListener("click", showGrid);
 
-listbutton.addEventListener("click", () => {
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+  gridbutton.classList.remove("active")
+  listbutton.classList.add("active");
 	display.classList.add("list");
 	display.classList.remove("grid");
-});
+}
+
+function showGrid() {
+  listbutton.classList.remove("active")
+  gridbutton.classList.add("active")
+	display.classList.add("grid");
+	display.classList.remove("list");
+}
