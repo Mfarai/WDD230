@@ -73,12 +73,12 @@ function displayBanner(dayName) {
 
     //Use this line to test the function: || dayName === "Current day name to test"
     if (dayName === "Monday" || dayName === "Tuesday") {
-        const banner = document.querySelector("#baner")
+        const banner = document.querySelector("#banner")
         banner.className = "display"
         banner.innerHTML = "<p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>"
     } else {
-        const banner = document.querySelector("#baner")
-        banner.classList.toggle("display")
+        const banner = document.querySelector("#banner")
+        banner.classList.toggle("displays")
     }
 }
 
