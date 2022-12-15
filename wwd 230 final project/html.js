@@ -1,0 +1,149 @@
+function getDayName(weekDayNumber) {
+    const dayNames = {0: "Sunday", 1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday"}
+
+    const dayName = dayNames[weekDayNumber]
+    return dayName
+}
+
+function getMonthName(monthNumber) {
+    const months = {0: "January", 1: "February", 2: "March", 3: "April", 4: "May", 5: "June",
+    6: "July", 7: "August", 8: "September", 9: "October", 10: "November", 11: "December"}
+
+    const monthName = months[monthNumber]
+    return monthName
+}
+
+//Define date variables
+const date = new Date()
+const dayNumber = date.getDate()
+const dayName = getDayName(date.getDay())
+const month = getMonthName(date.getMonth())
+const year = date.getFullYear()
+
+//Add year to footer
+document.querySelector("#year").textContent = year
+
+//Add last modified to footer
+const lastModified = document.lastModified
+document.querySelector("#lastModified").textContent = lastModified
+
+// // select HTML elements in the document
+// const currentTemp = document.querySelector('#current-temp');
+// const weatherIcon = document.querySelector('#weather-icon');
+// const captionDesc = document.querySelector('figcaption');
+// const wind = document.querySelector('.wind')
+const url = 'https://api.openweathermap.org/data/2.5/weather?id=3523349&units=standard&appid=edd16dca8c380963355601bf3dc100de';
+const weather = document.querySelector('.weatherInfo')
+
+
+async function apiFetch() {
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data); // this is for testing the call
+        displayResults(data);
+      } else {
+          throw Error(await response.text());
+      }
+    } catch (error) {
+        console.log(error);
+    }
+}
+  
+apiFetch();
+
+/*------temperature ------****/
+
+/*display the temp obtained, the icon and the description*/
+  function  displayResults(weatherData) {
+
+    let card = document.createElement('section');
+    let currentTemp = document.createElement('p');
+    let weatherIcon = document.createElement('img')
+    let captionDesc = document.createElement('figcaption');
+    let wind = document.createElement('p')
+ 
+    const tF = weatherData.main.temp.toFixed(0);
+    currentTemp.innerHTML = `<strong>${tF}ºC</strong>`;
+  
+    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+    const desc = weatherData.weather[0].description;
+        
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', desc);
+    captionDesc.textContent = capital_letter(desc);
+
+  
+    const smH = weatherData.wind.speed;
+    if (tF <= 50 && smH > 3) {
+        const windC = windChill(tF,smH);
+        wind.textContent = `Wind Chill: ${windC.toFixed(1)}`;
+    }
+    else {
+        wind.textContent = ``;
+    }
+
+    // Add/append the section(card) with the h2 element
+    card.appendChild(currentTemp);
+    card.appendChild(weatherIcon);
+    card.appendChild(captionDesc);
+    card.appendChild(wind);
+
+    // Add/append the existing HTML div with the cards class with the section(card)
+    document.querySelector('div.weatherInfo').appendChild(card);
+  }
+
+
+/* capitalize the description */
+function capital_letter(words) {
+    
+    words = words.split(" ");
+
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+    return words.join(" ");
+}
+
+
+/* calculate the wind chill*/
+function windChill(tF, smH) {
+    const f = 35.74 + 0.6215 * tF - 35.75 * (smH**0.16) + 0.4275 * tF * (smH**0.16)
+    return f
+}
+
+
+//home page 
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", function () {
+    header.classList.toggle("sticky", window.scrollY > 0);
+});
+
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist');
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x')
+    navlist.classList.toggle('active')
+}
+
+window.onscroll = () => {
+    menu.classList.remove('bx-x')
+    navlist.classList.remove ('active')
+}
+
+const sr = scrollReveal({
+    distance: '45px',
+    duration: 2700,
+    reset: true
+})
+
+sr.reveal('.home-text',{delay:350, origin: 'left'})
+sr.reveal('.home-img', { delay: 350, origin: 'right' })
+
+
+sr.reveal('.sub-service, .about, .portfolio, .service, .cta, .contact',{delay:200, origin: 'bottom'})
+
+
